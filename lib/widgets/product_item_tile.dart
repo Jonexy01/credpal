@@ -28,9 +28,15 @@ class _ProductItemTileState extends State<ProductItemTile> {
       height: 174,
       width: width(context) * 0.389,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Colors.white,
-      ),
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF000000).withOpacity(0.05),
+              offset: const Offset(0, 4),
+              blurRadius: 10,
+            ),
+          ]),
       child: Stack(
         children: [
           Align(
@@ -66,11 +72,14 @@ class _ProductItemTileState extends State<ProductItemTile> {
             padding: const EdgeInsets.only(left: 10, bottom: 41),
             child: Align(
               alignment: Alignment.bottomLeft,
-              child: Text(widget.title, style: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w800,
-                color: Color(0xFF1A1A1A),
-              ),),
+              child: Text(
+                widget.title,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w800,
+                  color: Color(0xFF1A1A1A),
+                ),
+              ),
             ),
           ),
           Padding(
@@ -79,18 +88,24 @@ class _ProductItemTileState extends State<ProductItemTile> {
               alignment: Alignment.bottomLeft,
               child: Row(
                 children: [
-                  Text(widget.price, style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w800,
-                    color: Color(0xFF274FED),
-                  ),),
+                  Text(
+                    widget.price,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w800,
+                      color: Color(0xFF274FED),
+                    ),
+                  ),
                   const SizedBox(width: 14),
-                  Text(widget.oldPrice, style: const TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xFFB3B3CC),
-                    decoration: TextDecoration.lineThrough,
-                  ),),
+                  Text(
+                    widget.oldPrice,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xFFB3B3CC),
+                      decoration: TextDecoration.lineThrough,
+                    ),
+                  ),
                 ],
               ),
             ),

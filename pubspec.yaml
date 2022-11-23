@@ -68,7 +68,10 @@ flutter:
         - asset: assets/fonts/Avenir-Light.ttf
           weight: 200
         
-        
+    - family: Axiforma
+      fonts:
+        - asset: assets/fonts/Axiforma-ExtraBold.ttf
+          weight: 700
         
         
         
